@@ -1,0 +1,10 @@
+[dev]
+host0[1:2] ansible_user=root ansible_ssh_private_key_file=/var/ans/master_key
+[test]
+host03 ansible_user=root ansible_ssh_private_key_file=/var/ans/master_key
+[proxy]
+host04 ansible_user=root ansible_ssh_private_key_file=/var/ans/master_key
+[prod]
+host05 ansible_user=root ansible_ssh_private_key_file=/var/ans/master_key
+[webservers:children]
+prod
